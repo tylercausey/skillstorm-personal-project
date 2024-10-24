@@ -1,0 +1,38 @@
+/* Style for the page container */
+.pageContainer {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Style for the page heading */
+  .pageHeading {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Style for the back link */
+  .backLink {
+    display: block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: linear-gradient(90deg, #0070f3, #005bb5);
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    transition: background 0.3s;
+  }
+  
+  /* Hover effect for the back link */
+  .backLink:hover {
+    background: linear-gradient(90deg, #005bb5, #003f7f);
+  }

@@ -1,6 +1,8 @@
 import axios from 'axios';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
+import Header from '../../components/Header'
+import styles from './CarDetailsPage.module.css';
 import Link from 'next/link';
 
 const CarDetailsPage = () => {
@@ -26,20 +28,21 @@ const CarDetailsPage = () => {
   };
 
   return (
-    <div>
+    <div className={styles.pageContainer}>
+      <Header />
       {car ? (
         <>
-          <h1>{`${car.make} ${car.model}`}</h1>
-          <p>Year: {car.year}</p>
-          <p>Color: {car.color}</p>
-          <p>Price: {car.price}</p>
-          <Link href={`/cars/${id}/edit`}>Edit</Link>
-          <button onClick={handleDelete}>Delete</button>
+          <h1 className={styles.carHeading}>{`${car.make} ${car.model}`}</h1>
+          <p className={styles.carDetails}> Year: {car.year}</p>
+          <p className={styles.carDetails}>Color: {car.color}</p>
+          <p className={styles.carDetails}>Price: {car.price}</p>
+          <Link href={`/cars/${id}/edit`} className={styles.actionLink}>Edit</Link>
+          <button onClick={handleDelete} className={styles.deleteButton}>Delete</button>
         </>
       ) : (
         <p>Loading...</p>
       )}
-      <Link href="/cars">Back to Cars</Link>
+      <Link href="/cars" className={styles.backLink}>Back to Cars</Link>
     </div>
   );
 };

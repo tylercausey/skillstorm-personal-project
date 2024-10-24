@@ -1,0 +1,83 @@
+/* Style for the page container */
+.pageContainer {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Style for the car heading */
+  .carHeading {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Style for the car details */
+  .carDetails {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 15px;
+  }
+  
+  /* Style for action links and buttons */
+  .actionLink {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 10px 20px;
+    background: linear-gradient(90deg, #0070f3, #005bb5);
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s;
+  }
+  
+  /* Hover effect for action links */
+  .actionLink:hover {
+    background: linear-gradient(90deg, #005bb5, #003f7f);
+  }
+  
+  /* Style for the delete button */
+  .deleteButton {
+    background-color: #ff4d4f;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  /* Hover effect for the delete button */
+  .deleteButton:hover {
+    background-color: #cc0000;
+    transform: scale(1.05);
+  }
+  
+  /* Style for the back link */
+  .backLink {
+    display: block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: linear-gradient(90deg, #0070f3, #005bb5);
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    transition: background 0.3s;
+  }
+  
+  /* Hover effect for the back link */
+  .backLink:hover {
+    background: linear-gradient(90deg, #005bb5, #003f7f);
+  }

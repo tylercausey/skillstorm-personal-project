@@ -1,6 +1,8 @@
-import { useState } from 'react';
+import { useState} from 'react';
+import styles from './CarForm.module.css';
 
 const CarForm = ({ initialData = {}, onSubmit }) => {
+
   const [form, setForm] = useState({
     make: initialData.make || '',
     model: initialData.model || '',
@@ -20,13 +22,13 @@ const CarForm = ({ initialData = {}, onSubmit }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input name="make" placeholder="Make" value={form.make} onChange={handleChange} required />
-      <input name="model" placeholder="Model" value={form.model} onChange={handleChange} required />
-      <input name="year" placeholder="Year" type="number" value={form.year} onChange={handleChange} required />
-      <input name="color" placeholder="Color" value={form.color} onChange={handleChange} required />
-      <input name="price" placeholder="Price" type="number" value={form.price} onChange={handleChange} required />
-      <button type="submit">Submit</button>
+    <form onSubmit={handleSubmit} className={styles.formContainer}>
+      <input name="make" placeholder="Make" value={form.make} onChange={handleChange} required className={styles.inputField}/>
+      <input name="model" placeholder="Model" value={form.model} onChange={handleChange} required className={styles.inputField}/>
+      <input name="year" placeholder="Year" type="number" value={form.year} onChange={handleChange} required className={styles.inputField}/>
+      <input name="color" placeholder="Color" value={form.color} onChange={handleChange} required className={styles.inputField}/>
+      <input name="price" placeholder="Price" type="number" value={form.price} onChange={handleChange} required className={styles.inputField}/>
+      <button type="submit" className={styles.submitButton}>Submit</button>
     </form>
   );
 };

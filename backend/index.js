@@ -1,7 +1,10 @@
 const express = require('express');
 const pool = require('./db');
 const cors = require('cors');
+const jwt = require('jsonwebtoken')
 require('dotenv').config();
+
+const authRoutes = require('./routes/auth');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -10,15 +13,32 @@ const PORT = process.env.PORT || 3000;
 app.use(cors()); 
 app.use(express.json()); 
 
+const authenticateToken = (req, res, next) => {
+  const authHeader = req.headers['authorization'];
+  const token = authHeader && authHeader.split(' ')[1];
+
+  if (!token) return res.status(401).send('Access denied');
+
+  jwt.verify(token, process.env.JWT_SECRET, (err, user) => {
+    if (err) return res.status(403).send('Invalid token');
+    req.user = user;
+    next();
+  });
+};
+
 // Routes
+app.use('/auth', authRoutes);
+
 
 // Create a new car
-app.post('/cars', async (req, res) => {
+app.post('/cars', authenticateToken, async (req, res) => {
   try {
-    const { make, model, year, color, price } = req.body;
+    const {make, model, year, color, price } = req.body;
+    const user_id = req.user.userId;
+
     const newCar = await pool.query(
-      'INSERT INTO cars (make, model, year, color, price) VALUES ($1, $2, $3, $4, $5) RETURNING *',
-      [make, model, year, color, price]
+      'INSERT INTO cars (user_id, make, model, year, color, price) VALUES ($1, $2, $3, $4, $5, $6) RETURNING *',
+      [user_id, make, model, year, color, price]
     );
     res.json(newCar.rows[0]);
   } catch (err) {
@@ -28,9 +48,11 @@ app.post('/cars', async (req, res) => {
 });
 
 // Get all cars
-app.get('/cars', async (req, res) => {
+app.get('/cars', authenticateToken, async (req, res) => {
+  const user_id = req.user.userId;
+
   try {
-    const allCars = await pool.query('SELECT * FROM cars');
+    const allCars = await pool.query('SELECT * FROM cars WHERE user_id = $1', [user_id]);
     res.json(allCars.rows);
   } catch (err) {
     console.error(err.message);

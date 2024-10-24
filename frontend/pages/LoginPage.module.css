@@ -1,0 +1,42 @@
+/* Style for the page container */
+.pageContainer {
+    max-width: 400px;
+    margin: 60px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Style for the page heading */
+  .pageHeading {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Style for the register button */
+  .registerButton {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    background: linear-gradient(90deg, #0070f3, #005bb5);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+  }
+  
+  /* Hover effect for the register button */
+  .registerButton:hover {
+    background: linear-gradient(90deg, #005bb5, #003f7f);
+    transform: scale(1.02);
+  }
+  

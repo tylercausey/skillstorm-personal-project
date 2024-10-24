@@ -1,0 +1,72 @@
+/* Style for the form container */
+.formContainer {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    max-width: 500px;
+    margin: 40px auto;
+    transition: box-shadow 0.3s;
+  }
+  
+  /* Add a slight shadow on hover */
+  .formContainer:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Style for input fields */
+  .inputField {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 15px 0;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    font-family: 'Arial', sans-serif;
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+  
+  /* Style for focused input fields */
+  .inputField:focus {
+    border-color: #0070f3;
+    box-shadow: 0 0 8px rgba(0, 112, 243, 0.4);
+    outline: none;
+  }
+  
+  /* Style for the submit button */
+  .submitButton {
+    background: linear-gradient(90deg, #0070f3, #005bb5);
+    color: white;
+    padding: 14px 0;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    width: 100%;
+    margin-top: 20px;
+    transition: background 0.3s, transform 0.2s;
+  }
+  
+  /* Hover effect for the submit button */
+  .submitButton:hover {
+    background: linear-gradient(90deg, #005bb5, #003f7f);
+    transform: scale(1.02);
+  }
+  
+  /* Add a subtle animation on form appearance */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Apply the animation to the form container */
+  .formContainer {
+    animation: fadeIn 0.6s ease-in-out;
+  }

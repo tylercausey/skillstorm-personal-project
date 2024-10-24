@@ -1,0 +1,46 @@
+/* Style for the header container */
+.header {
+    background-color: #0070f3;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Style for the navigation links */
+  .navLink {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  /* Hover effect for navigation links */
+  .navLink:hover {
+    color: #d0eaff;
+  }
+  
+  /* Style for the logout button */
+  .logoutButton {
+    background: linear-gradient(90deg, #005bb5, #003f7f);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
+  }
+  
+  /* Hover effect for the logout button */
+  .logoutButton:hover {
+    background: linear-gradient(90deg, #003f7f, #001f4d);
+    transform: scale(1.05);
+  }

@@ -1,0 +1,72 @@
+/* Style for the page container */
+.pageContainer {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Style for the page heading */
+  .pageHeading {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Style for the link to add a new car */
+  .addCarLink {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background: linear-gradient(90deg, #0070f3, #005bb5);
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s;
+    text-align: center;
+  }
+  
+  /* Hover effect for the add new car link */
+  .addCarLink:hover {
+    background: linear-gradient(90deg, #005bb5, #003f7f);
+  }
+  
+  /* Style for the list of cars */
+  .carsList {
+    list-style: none;
+    padding: 0;
+  }
+  
+  /* Style for individual car list items */
+  .carItem {
+    background-color: #f9f9f9;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
+  }
+  
+  /* Hover effect for car items */
+  .carItem:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Style for car links */
+  .carLink {
+    text-decoration: none;
+    font-size: 18px;
+    color: #0070f3;
+    font-weight: bold;
+  }
+  
+  /* Hover effect for car links */
+  .carLink:hover {
+    color: #005bb5;
+  }

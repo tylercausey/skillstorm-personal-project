@@ -1,0 +1,38 @@
+/* Style for the page container */
+.pageContainer {
+    max-width: 600px;
+    margin: 60px auto;
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    text-align: center;
+  }
+  
+  /* Style for the page heading */
+  .pageHeading {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 30px;
+  }
+  
+  /* Style for the links */
+  .actionLink {
+    display: inline-block;
+    margin: 10px 15px;
+    padding: 12px 25px;
+    background: linear-gradient(90deg, #0070f3, #005bb5);
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background 0.3s;
+  }
+  
+  /* Hover effect for the links */
+  .actionLink:hover {
+    background: linear-gradient(90deg, #005bb5, #003f7f);
+  }
+  

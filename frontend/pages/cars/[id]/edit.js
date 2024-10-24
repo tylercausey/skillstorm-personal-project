@@ -1,8 +1,10 @@
 import axios from 'axios';
 import { useRouter } from 'next/router';
+import Header from '../../../components/Header'
 import { useEffect, useState } from 'react';
 import CarForm from '../../../components/CarForm';
 import Link from 'next/link';
+import styles from './EditCarPage.module.css'
 
 const EditCarPage = () => {
   const router = useRouter();
@@ -27,10 +29,11 @@ const EditCarPage = () => {
   };
 
   return (
-    <div>
-      <h1>Edit Car</h1>
+    <div className={styles.pageContainer}>
+      <Header />
+      <h1 className={styles.pageHeading}>Edit Car</h1>
       {car ? <CarForm initialData={car} onSubmit={handleSubmit} /> : <p>Loading...</p>}
-      <Link href="/cars">Back to Cars</Link>
+      <Link href="/cars" className={styles.backLink}>Back to Cars</Link>
     </div>
   );
 };
